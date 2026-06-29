@@ -1,0 +1,2 @@
+# HAGRAG
+Graph based RAG
