@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use HAGRAG, please cite the accompanying paper."
+title: "HAGRAG"
+type: software
+license: MIT
+authors:
+  - family-names: Rani
+    given-names: Maneeha
+  - family-names: Mishra
+    given-names: Bhupesh Kumar
+  - family-names: Thakker
+    given-names: Dhavalkumar
+  - family-names: Khan
+    given-names: Javed Ali
+version: 1.0.0
+date-released: 2026-08-26
+repository-code: "https://github.com/maneeha/HAGRAG"
+preferred-citation:
+  type: article
+  title: "A Hierarchical Attributed Graph RAG Framework for Biomedical Literature Retrieval"
+  authors:
+    - family-names: Rani
+      given-names: Maneeha
+    - family-names: Mishra
+      given-names: Bhupesh Kumar
+    - family-names: Thakker
+      given-names: Dhavalkumar
+    - family-names: Khan
+      given-names: Javed Ali
+  journal: "Machine Learning: Science and Technology"
+  year: 2026

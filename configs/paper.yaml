@@ -1,0 +1,56 @@
+seed: 42
+
+paths:
+  pdf_dir: data/pdfs
+  qa_dataset: data/qa/100diabetes_qa_dataset.json
+  checkpoint_dir: checkpoints/paper
+  output_dir: outputs/paper
+
+models:
+  generator: meta-llama/Meta-Llama-3.1-8B-Instruct
+  embedding: sentence-transformers/all-MiniLM-L6-v2
+  device: auto
+  use_4bit: false
+  max_new_tokens: 512
+  temperature: 0.1
+  top_p: 0.95
+
+neo4j:
+  uri_env: NEO4J_URI
+  username_env: NEO4J_USERNAME
+  password_env: NEO4J_PASSWORD
+
+chunking:
+  chunk_size: 1024
+  chunk_overlap: 20
+  separators: ["\n\n", "\n", ". ", " ", ""]
+
+graph:
+  semantic_neighbors: 5
+  similarity_percentile: 70.0
+  max_layers: 4
+  min_nodes_per_layer: 2
+  clustering_resolution: 1.0
+  community_link_mode: enhanced
+  community_edge_weight: 0.6
+  community_embedding_weight: 0.4
+  target_edge_density: 0.3
+
+index:
+  embedding_dim: 384
+  M: 16
+  ef_construction: 200
+  ef_search: 50
+  traversal_k: 3
+
+retrieval:
+  relevance_threshold: 0.3
+  final_context_items: 5
+  weighting: abstract
+  adaptive_threshold: 0.3
+
+evaluation:
+  max_queries: 100
+  faithfulness_threshold: 0.3
+  relevance_threshold: 0.4
+  correctness_threshold: 0.3
